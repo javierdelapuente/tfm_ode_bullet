@@ -1,0 +1,6 @@
+#ifndef OBUGRE_CONFIGURE_H
+#define OBUGRE_CONFIGURE_H
+
+#cmakedefine ODE_WITH_LIBCCD
+
+#endif

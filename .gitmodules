@@ -1,0 +1,16 @@
+[submodule "extern/bullet3"]
+	path = extern/bullet3
+	url = https://github.com/javierdelapuente/bullet3.git
+	branch = master
+[submodule "extern/qhull"]
+	path = extern/qhull
+	url = https://github.com/javierdelapuente/qhull.git
+	branch = master
+[submodule "extern/ode"]
+	path = extern/ode
+	url = https://github.com/javierdelapuente/ode.git
+	branch = master
+[submodule "extern/eigen"]
+	path = extern/eigen
+	url = https://github.com/javierdelapuente/eigen
+	branch = master

@@ -1,0 +1,361 @@
+material Obvclip/solid
+{
+   technique
+   {
+      pass
+      {
+         
+         lighting on
+
+ambient 0.5 0.5 0.5 1
+diffuse 0.7 0.3 0.4 1
+emissive 0 0 0 1
+
+      }
+   }
+}
+
+material Obvclip/bullet
+{
+   technique
+   {
+      pass
+      {
+         
+         lighting on
+
+ambient 0.4 0.3 0.3 1
+diffuse 0.7 0.1 0.1 1
+emissive 0 0 0 1
+
+//scene_blend alpha_blend   
+//depth_write off
+//       texture_unit
+       //{
+//         colour_op_ex source1 src_manual src_current 1 0 0
+         //alpha_op_ex source1 src_manual src_current 0.5
+//       }
+      }
+   }
+}
+
+
+material Obvclip/bulletvclip
+{
+   technique
+   {
+      pass
+      {
+         
+         lighting on
+
+ambient 0.4 0.4 0.3 1
+diffuse 0.7 0.4 0.1 1
+emissive 0 0 0 1
+
+//scene_blend alpha_blend   
+//depth_write off
+//       texture_unit
+       //{
+//         colour_op_ex source1 src_manual src_current 1 0 0
+         //alpha_op_ex source1 src_manual src_current 0.5
+//       }
+      }
+   }
+}
+
+
+
+material Obvclip/ode
+{
+   technique
+   {
+      pass
+      {
+         lighting on
+
+         ambient 0.3 0.3 0.4 1
+         diffuse 0.1 0.1 0.7 1
+         emissive 0 0 0 1
+      }
+   }
+}
+
+
+material Obvclip/odevclip
+{
+   technique
+   {
+      pass
+      {
+         lighting on
+
+         ambient 0.3 0.4 0.4 1
+         diffuse 0.1 0.4 0.7 1
+         emissive 0 0 0 1
+      }
+   }
+}
+
+material Obvclip/odevclipnocache
+{
+   technique
+   {
+      pass
+      {
+         lighting on
+
+         ambient 0.4 0.5 0.4 1
+         diffuse 0.2 0.5 0.7 1
+         emissive 0 0 0 1
+      }
+   }
+}
+
+material Obvclip/RadioactiveGreen
+{
+   technique
+   {
+      pass
+      {
+         lighting on
+
+         ambient 0.1 0.3 0.1 1
+         diffuse 0.2 0.2 0.2 1
+         emissive 0.05 0.8 0.05 1
+      }
+   }
+}
+
+
+
+material Obvclip/WireFrame
+{
+   technique
+   {
+      pass
+      {
+         point_size 5.0
+         line_width 5.0
+         //depth_bias 1 1
+      }
+   }
+}
+
+
+material Obvclip/DebugVClip
+{
+   technique
+   {
+      pass
+      {
+         lighting on
+
+         ambient 0.2 1.0 0.2 1.0
+         diffuse 0.2 1.0 0.2 1.0
+         emissive 0.2 1.0 0.2 1.0
+
+         depth_write off
+		 scene_blend alpha_blend
+         cull_hardware none
+         //polygon_mode wireframe
+         //polygon_mode points
+         point_size 20.0
+         line_width 15.0
+         depth_bias 1 1
+      }
+   }
+}
+
+material Obvclip/DebugPlaneVClip
+{
+   technique
+   {
+      pass
+      {
+         lighting on
+
+         ambient 0.1 0.3 0.1 0.1
+         diffuse 0.2 0.2 0.2 0.1
+         emissive 0.05 0.8 0.05 0.1
+
+         depth_write off
+		 scene_blend alpha_blend
+         cull_hardware clockwise
+         //polygon_mode wireframe
+         //polygon_mode points
+         point_size 10.0
+         line_width 10.0
+         depth_bias 1 1
+      }
+      pass  
+      {
+         lighting on
+
+         ambient 0.3 0.1 0.1 0.1
+         diffuse 0.2 0.2 0.2 0.1
+         emissive 0.8 0.05 0.05 0.1
+
+         depth_write off
+		 scene_blend alpha_blend
+         cull_hardware anticlockwise
+         //polygon_mode wireframe
+         //polygon_mode points
+         point_size 10.0
+         line_width 10.0
+         depth_bias 1 1
+      }
+   }
+}
+
+material Obvclip/RadioactiveGreenAlpha
+{
+   technique
+   {
+      pass
+      {
+         lighting on
+
+         ambient 0.1 0.3 0.1 0.2
+         diffuse 0.2 0.2 0.2 0.2
+         emissive 0.05 0.8 0.05 0.2
+
+         depth_write off
+		 scene_blend alpha_blend
+         cull_hardware none
+         //polygon_mode wireframe
+         //polygon_mode points
+         //point_size 10.0
+         depth_bias 1 1
+      }
+   }
+}
+
+
+material Obvclip/arrow_blue
+{
+   technique
+   {
+      pass
+      {
+      lighting off
+      polygon_mode_overrideable false
+      scene_blend alpha_blend
+      cull_hardware none
+      cull_software none
+      depth_write off
+      depth_check off
+
+      shading flat
+      texture_unit
+
+      {
+        colour_op_ex source2 src_current src_manual 0.0 0.0 1.0
+      }
+      }
+      pass
+      {
+      lighting off
+      polygon_mode_overrideable false
+      cull_hardware none
+      cull_software none
+      depth_write off
+
+      shading flat
+      texture_unit
+
+      {
+        colour_op_ex source2 src_current src_manual 0.0 0.0 1.0
+      }
+      }
+   }
+}
+
+
+material Obvclip/arrow_yellow : Obvclip/arrow_blue
+{
+   technique
+   {
+      pass
+      {
+      texture_unit
+      {
+        colour_op_ex source2 src_current src_manual 1.0 1.0 0.0
+      }
+      }
+      pass
+      {
+      texture_unit
+      {
+        colour_op_ex source2 src_current src_manual 1.0 1.0 0.0
+      }
+      }
+   }
+}
+
+
+material Obvclip/arrow_cyan : Obvclip/arrow_blue
+{
+   technique
+   {
+      pass
+      {
+      texture_unit
+      {
+        colour_op_ex source2 src_current src_manual 0.0 1.0 1.0
+      }
+      }
+      pass
+      {
+      texture_unit
+      {
+        colour_op_ex source2 src_current src_manual 0.0 1.0 1.0
+      }
+      }
+   }
+}
+
+
+material Obvclip/arrow_magenta : Obvclip/arrow_blue
+{
+   technique
+   {
+      pass
+      {
+      texture_unit
+      {
+        colour_op_ex source2 src_current src_manual 1.0 0.0 1.0
+      }
+      }
+      pass
+      {
+      texture_unit
+      {
+        colour_op_ex source2 src_current src_manual 1.0 0.0 1.0
+      }
+      }
+   }
+}
+
+
+
+material Obvclip/arrow_normal : Obvclip/arrow_blue
+{
+   technique
+   {
+      pass
+      {
+      texture_unit
+      {
+        colour_op_ex source2 src_current src_manual 0.5 0.5 0.5
+      }
+      }
+      pass
+      {
+      texture_unit
+      {
+        colour_op_ex source2 src_current src_manual 0.5 0.5 0.5
+      }
+      }
+   }
+}
