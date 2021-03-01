@@ -21,10 +21,10 @@ físicos. Aunque aún es un prototipo incompleto, permite realizar con facilidad
 un análisis comparativo de los motores físicos sobre distintos escenarios. 
 
 Es importante tener en cuenta que si el mismo motor físico se ejecuta
-dos veces seguidas, los tiempos de rendimiento pueden ser nos fiables
+dos veces seguidas, los tiempos de rendimiento pueden no ser fiables
 por el uso de las cachés.  Esto ocurre por ejemplo en 
 performance_vclip_ode_bullet.cpp, donde se recomienda que para 
-obtener los datos de rendimiento se ejecuten cada escenario en cada motor
+obtener los datos de rendimiento se ejecute cada escenario en cada motor
 de forma separada.
 
     
