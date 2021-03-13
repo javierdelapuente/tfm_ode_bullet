@@ -215,8 +215,8 @@ la clase Looper ejecutará la simulación con los motores deseados.
 Para poder interactuar con los motores fı́sicos durante la simulación es
 posible utilizar los callbacks definidos en EngineListener , que permiten a la
 aplicación obtener información o modificar aspectos del escenario. Un ejemplo
-de este uso es la clase EngineLogger , utilizada para obtener información de
-tiempos de ejecución o de invariantes fı́sicos en los motores.
+de este uso es la clase EngineLogger, utilizada para obtener información de
+tiempos de ejecución o de propiedades fı́sicas de los motores.
 
 Algunas de las funciones más útiles a la hora de utilizar Obugre son las
 siguientes:
